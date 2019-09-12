@@ -1,0 +1,29 @@
+<div class="timer-container">
+  <div class="timer">
+    <ng-container>
+      <div class="time">
+        {{ timer.getTotalTime() | timeFormat}}
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="button-container">
+      <button #startButton class="start-btn" >
+          <img *ngIf="!isStop else stop" src="../../assets/svg/play-button-svgrepo-com (1).svg" alt="Play">
+     </button>
+      <button #waitButton>
+          <img src="../../assets/svg/pause-multimedia-outlined-button-svgrepo-com.svg" alt="Wait">
+      </button>
+        <!-- <button #stopButton *ngIf="isStop">
+        </button> -->
+        <ng-template #stop>
+          <img src="../../assets/svg/stop-square-svgrepo-com.svg" alt="">
+        </ng-template>
+        
+      
+      
+      <button #resetButton>
+          <img src="../../assets/svg/cross-rounded-outline-svgrepo-com.svg" alt="Reset">
+      </button>
+  </div>
+</div>
