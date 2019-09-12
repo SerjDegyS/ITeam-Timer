@@ -62,7 +62,7 @@ export class TimerComponent implements OnInit, AfterViewInit {
             // this.isStop = !this.isStop; 
             if(!this.isStop){
               this.isStop = !this.isStop
-              return interval(100)
+              return interval(1000)
             }else return of(false)
           }
           case false : {
